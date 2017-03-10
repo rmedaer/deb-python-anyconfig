@@ -1,0 +1,43 @@
+Source: python-anyconfig
+Section: python
+Priority: optional
+Maintainer: Raphael Medaer <raphael@medaer.me>
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-all,
+               python-yaml,
+               python-cbor,
+               python-jinja2, 
+               python-configobj,
+               python-jsonschema,
+               python-msgpack,
+               python-pymongo,
+               python-simplejson,
+               python-toml,
+               python-mock,
+               python-nose,
+               python-pep8,
+               python-astroid,
+               pylint
+Standards-Version: 3.9.5
+Homepage: https://github.com/ssato/python-anyconfig
+#Vcs-Git: git://anonscm.debian.org/collab-maint/python-anyconfig.git
+#Vcs-Browser: http://anonscm.debian.org/?p=collab-maint/python-anyconfig.git;a=summary
+
+Package: python-anyconfig
+Architecture: all
+Depends: ${misc:Depends},
+         ${python:Depends},
+         python-yaml,
+         python-cbor,
+         python-jinja2, 
+         python-configobj,
+         python-jsonschema,
+         python-msgpack,
+         python-pymongo,
+         python-simplejson,
+         python-toml
+Description: Python APIs to access to configuration files in various formats.
+ This python library provides common APIs to access to configuration files in
+ various formats with some useful features such as contents merge, templates
+ and schema validation/generation support.

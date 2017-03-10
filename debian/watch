@@ -1,0 +1,2 @@
+opts=filenamemangle=s/.+\/v?(\d\S+)\.tar\.gz/python-anyconfig-$1\.tar\.gz/ \
+  https://github.com/ssato/python-anyconfig/tags .*/v?(\d\S+)\.tar\.gz

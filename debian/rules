@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+
+DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/default.mk
+
+export PYBUILD_NAME=anyconfig
+
+# main packaging script based on dh7 syntax
+%:
+	dh $@ --with python2 --buildsystem=pybuild
+
+override_dh_auto_test:
+	./pkg/runtest.sh
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -r anyconfig.egg-info/
